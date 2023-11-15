@@ -31,6 +31,5 @@ function(DownloadArchive TARGET_NAME URL HASH)
 
     file(ARCHIVE_EXTRACT INPUT ${SOURCE_DIR}/${FILENAME} DESTINATION ${CMAKE_BINARY_DIR}/${TARGET_NAME})
 
-    # set(${TARGET_NAME}_DownloadArchive download_${TARGET_NAME} PARENT_SCOPE)
     set(${TARGET_NAME}_content_path ${CMAKE_BINARY_DIR}/${TARGET_NAME} PARENT_SCOPE)
 endfunction()
